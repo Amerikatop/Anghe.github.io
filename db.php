@@ -1,5 +1,13 @@
 <?php
 
-$conexion=mysqli_connect("sql10.freesqldatabase.com","sql10585340","QF9dnh8bTs","sql10585340")or die(
-    "error de conexion");
+$server = 'sql10.freesqldatabase.com';
+$username = 'sql10585340';
+$password = 'QF9dnh8bTs';
+$database = 'sql10585340';
+
+try {
+  $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
+} catch (PDOException $e) {
+  die('Connection Failed: ' . $e->getMessage());
+}
 ?>
