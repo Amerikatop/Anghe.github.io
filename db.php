@@ -1,13 +1,13 @@
 <?php
-
-$server = 'sql10.freesqldatabase.com';
-$username = 'sql10585340';
-$password = 'QF9dnh8bTs';
-$database = 'sql10585340';
+$server = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'php_login_database';
 
 try {
   $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
 } catch (PDOException $e) {
   die('Connection Failed: ' . $e->getMessage());
 }
+
 ?>
